@@ -1,3 +1,5 @@
+# ignore the models exported
+*.bin 
 .python-version
 data/
 # Byte-compiled / optimized / DLL files
