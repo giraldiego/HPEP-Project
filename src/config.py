@@ -44,10 +44,6 @@ def create_folders():
         os.makedirs(original_dir)
         print("Created 'original' folder within 'data'.")
     
-    if not os.path.exists(custom_dir):
-        os.makedirs(custom_dir)
-        print("Created 'custom' folder within 'data'.")
-
 
 def download_zip():
     url = "https://www.mhasweb.org/resources/DATA/HarmonizedData/H_MHAS/Version_C2/SAS/H_MHAS_c2.sas.zip"
@@ -86,11 +82,13 @@ def download_zip():
         print("ZIP extracted")
 
 
-def get_data_frame():
-
+def setup_data():
     change_to_root_folder()
     create_folders()
     download_zip()
+
+    
+def get_data_frame():
     
     system = platform.system()
     
@@ -108,3 +106,5 @@ def get_data_frame():
     except Exception as e:
         print("Error occurred while reading the SAS file:", e)
         return None
+    
+    
