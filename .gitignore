@@ -1,7 +1,10 @@
-# ignore the models exported
+# Ignore specific project's files
 *.bin 
 .python-version
 data/
+dataset/
+*patient.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
